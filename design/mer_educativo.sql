@@ -1,6 +1,8 @@
 CREATE TABLE [asignatura] (
   [id_asignatura] integer PRIMARY KEY,
-  [nombre] integer
+  [nombre] integer,
+  [facultad] varchar(255),
+  [creditos] integer
 )
 GO
 
