@@ -1,3 +1,7 @@
+/*
+ * Esta tabla se encarga de registrar la información relacionada con las asignaturas de la factultad
+ * Una asignatura esta restringida por facultad
+ */
 CREATE TABLE [asignatura] (
   [id_asignatura] integer PRIMARY KEY,
   [nombre] integer,
@@ -6,6 +10,9 @@ CREATE TABLE [asignatura] (
 )
 GO
 
+/*
+ * Otra documentación
+ */
 CREATE TABLE [alumno] (
   [id_alumno] integer PRIMARY KEY,
   [nombre] nvarchar(255),
