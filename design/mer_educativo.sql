@@ -22,6 +22,9 @@ CREATE TABLE [alumno] (
 )
 GO
 
+/*
+ * Esto es interesante? mes escuchan bien?
+ */
 CREATE TABLE [instructor] (
   [id_instructor] integer PRIMARY KEY,
   [nombre] nvarchar(255),
