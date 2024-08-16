@@ -9,7 +9,7 @@ CREATE TABLE [asignatura] (
   [creditos] integer
 )
 GO
-
+create table prueba (columna integer);
 /*
  * Otra documentación
  */
