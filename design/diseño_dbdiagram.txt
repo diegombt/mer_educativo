@@ -1,0 +1,49 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+TABLE asignatura {
+  id_asignatura integer [primary key]
+  nombre integer
+}
+
+TABLE alumno {
+  id_alumno integer [primary key]
+  nombre varchar
+  fecha_nacimiento datetime
+  telefono varchar
+  estado varchar
+}
+
+TABLE instructor {
+  id_instructor integer [primary key]
+  nombre nvarchar(255)
+  especialidad nvarchar(255)
+  telefono nvarchar(25)
+}
+
+TABLE detalles_asignatura {
+  id_detalles_asignatura integer [primary key]
+  id_asignatura integer
+  id_instructor integer
+  fecha_inicio datetime
+  fecha_fin datetime
+  año integer
+}
+
+table detalles_inscripcion {
+  id_detalles_inscripcion integer [primary key]
+  id_asignatura integer
+  id_alumno integer
+  fecha_inscripcion datetime
+  fecha_actualizacion datetime
+  fecha_cancelacion datetime
+  estado varchar
+}
+
+Ref: "asignatura"."id_asignatura" < "detalles_asignatura"."id_asignatura"
+
+Ref: "instructor"."id_instructor" < "detalles_asignatura"."id_instructor"
+
+Ref: "alumno"."id_alumno" < "detalles_inscripcion"."id_alumno"
+
+Ref: "asignatura"."id_asignatura" < "detalles_inscripcion"."id_asignatura"
